@@ -3,10 +3,14 @@ import GameCircle from "./GameCircle";
 import "../Game.css";
 
 const GameBoard = () => {
+  const circleClicked = (id) => {
+    console.log("circle clicked: " + id); // TESTING
+  };
+
   return (
     <div className="gameBoard">
-      <GameCircle id={1}></GameCircle>
-      <GameCircle id={2}></GameCircle>
+      <GameCircle id={1} onCircleClick={circleClicked}></GameCircle>
+      <GameCircle id={2} onCircleClick={circleClicked}></GameCircle>
       <GameCircle id={3}></GameCircle>
       <GameCircle id={4}></GameCircle>
       <GameCircle id={5}></GameCircle>
