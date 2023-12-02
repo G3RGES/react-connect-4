@@ -8,6 +8,10 @@ const GameBoard = () => {
     gridTemplateRows: "1fr 1fr 1fr 1fr",
     padding: 20,
     width: 500,
+    position: "absolute",
+    left: "50%",
+    marginLeft: "-250px",
+    top: "20%",
   };
 
   return (
