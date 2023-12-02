@@ -10,10 +10,7 @@ const GameCircle = ({ id, children }) => {
     <div
       onClick={clickHandler}
       id={id}
-      style={
-        id % 2 === 0 ? { backgroundColor: "blue" } : { backgroundColor: "red" }
-      }
-      className="gameCircle"
+      className={`gameCircle ${id % 2 === 0 ? "even" : "odd"}`}
     >
       {children}
     </div>
