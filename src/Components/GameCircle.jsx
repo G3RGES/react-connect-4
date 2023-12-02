@@ -1,13 +1,13 @@
 import React from "react";
 
-const GameCircle = ({ id }) => {
+const GameCircle = ({ id, children }) => {
   const clickHandler = () => {
     alert("u clicked" + id); //TESTING
   };
 
   return (
     <div onClick={clickHandler} id={id}>
-      GameCircle - {id}
+      {children} - {id}
     </div>
   );
 };
