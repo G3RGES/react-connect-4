@@ -8,6 +8,7 @@ const GameBoard = () => {
         display: "grid",
         gridTemplateColumns: "1fr 1fr 1fr 1fr",
         gridTemplateRows: "1fr 1fr 1fr 1fr",
+        padding: 20,
       }}
     >
       <GameCircle id={1} color="red"></GameCircle>
@@ -18,6 +19,14 @@ const GameBoard = () => {
       <GameCircle id={6} color="blue"></GameCircle>
       <GameCircle id={7} color="red"></GameCircle>
       <GameCircle id={8} color="blue"></GameCircle>
+      <GameCircle id={9} color="red"></GameCircle>
+      <GameCircle id={10} color="blue"></GameCircle>
+      <GameCircle id={11} color="red"></GameCircle>
+      <GameCircle id={12} color="blue"></GameCircle>
+      <GameCircle id={13} color="red"></GameCircle>
+      <GameCircle id={14} color="blue"></GameCircle>
+      <GameCircle id={15} color="red"></GameCircle>
+      <GameCircle id={16} color="blue"></GameCircle>
     </div>
   );
 };
