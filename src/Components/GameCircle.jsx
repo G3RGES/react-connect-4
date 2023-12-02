@@ -6,7 +6,16 @@ const GameCircle = ({ id, children, color }) => {
   };
 
   return (
-    <div onClick={clickHandler} id={id} style={{ backgroundColor: color }}>
+    <div
+      onClick={clickHandler}
+      id={id}
+      style={{
+        backgroundColor: color,
+        width: 100,
+        height: 100,
+        borderBottom: "1px solid black",
+      }}
+    >
       {children}
     </div>
   );
