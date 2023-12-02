@@ -1,14 +1,10 @@
 import React from "react";
 import "../Game.css";
 
-const GameCircle = ({ id, children }) => {
-  const clickHandler = () => {
-    alert("u clicked" + id); //TESTING
-  };
-
+const GameCircle = ({ id, children, onCircleClick }) => {
   return (
     <div
-      onClick={clickHandler}
+      onClick={() => onCircleClick(id)}
       id={id}
       className={`gameCircle ${id % 2 === 0 ? "even" : "odd"}`}
     >
