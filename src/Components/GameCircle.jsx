@@ -1,17 +1,20 @@
 import React from "react";
 import "../Game.css";
 
-const GameCircle = ({ id, children, color }) => {
-  const style = {
-    backgroundColor: color,
-  };
-
+const GameCircle = ({ id, children }) => {
   const clickHandler = () => {
     alert("u clicked" + id); //TESTING
   };
 
   return (
-    <div onClick={clickHandler} id={id} style={style} className="gameCircle">
+    <div
+      onClick={clickHandler}
+      id={id}
+      style={
+        id % 2 === 0 ? { backgroundColor: "blue" } : { backgroundColor: "red" }
+      }
+      className="gameCircle"
+    >
       {children}
     </div>
   );
