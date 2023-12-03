@@ -15,8 +15,16 @@ const GameBoard = () => {
 
   return (
     <div className="gameBoard">
-      <GameCircle id={1} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={2} onCircleClick={circleClicked}></GameCircle>
+      <GameCircle
+        id={1}
+        onCircleClick={circleClicked}
+        className="player_1"
+      ></GameCircle>
+      <GameCircle
+        id={2}
+        onCircleClick={circleClicked}
+        className="player_2"
+      ></GameCircle>
       <GameCircle id={3} onCircleClick={circleClicked}></GameCircle>
       <GameCircle id={4} onCircleClick={circleClicked}></GameCircle>
       <GameCircle id={5} onCircleClick={circleClicked}></GameCircle>
