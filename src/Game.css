@@ -15,12 +15,17 @@
   height: 100px;
   margin: 10px;
   border-radius: 50%;
+  border: 1px solid black;
 }
 
-.odd {
+.player_0 {
+  background-color: white;
+}
+
+.player_1 {
   background-color: #ee242c;
 }
 
-.even {
+.player_2 {
   background-color: #034694;
 }
