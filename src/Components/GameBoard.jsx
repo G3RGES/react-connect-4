@@ -8,37 +8,40 @@ const GameBoard = () => {
 
   const circleClicked = (id) => {
     // console.log("circle clicked: " + id); // TESTING
-    gameBoard[id] = 1;
-    setGameBoard(gameBoard);
-    console.log(gameBoard);
+
+    const board = [...gameBoard];
+
+    board[id] = 1;
+    setGameBoard(board);
+    console.log(board); // TESTING
   };
 
   return (
     <div className="gameBoard">
       <GameCircle
+        id={0}
+        onCircleClick={circleClicked}
+        className={`player_${gameBoard[0]}`}
+      />
+      <GameCircle
         id={1}
         onCircleClick={circleClicked}
-        className="player_1"
-      ></GameCircle>
-      <GameCircle
-        id={2}
-        onCircleClick={circleClicked}
-        className="player_2"
-      ></GameCircle>
-      <GameCircle id={3} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={4} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={5} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={6} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={7} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={8} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={9} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={10} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={11} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={12} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={13} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={14} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={15} onCircleClick={circleClicked}></GameCircle>
-      <GameCircle id={16} onCircleClick={circleClicked}></GameCircle>
+        className={`player_${gameBoard[1]}`}
+      />
+      <GameCircle id={2} onCircleClick={circleClicked} />
+      <GameCircle id={3} onCircleClick={circleClicked} />
+      <GameCircle id={4} onCircleClick={circleClicked} />
+      <GameCircle id={5} onCircleClick={circleClicked} />
+      <GameCircle id={6} onCircleClick={circleClicked} />
+      <GameCircle id={7} onCircleClick={circleClicked} />
+      <GameCircle id={8} onCircleClick={circleClicked} />
+      <GameCircle id={9} onCircleClick={circleClicked} />
+      <GameCircle id={10} onCircleClick={circleClicked} />
+      <GameCircle id={11} onCircleClick={circleClicked} />
+      <GameCircle id={12} onCircleClick={circleClicked} />
+      <GameCircle id={13} onCircleClick={circleClicked} />
+      <GameCircle id={14} onCircleClick={circleClicked} />
+      <GameCircle id={15} onCircleClick={circleClicked} />
     </div>
   );
 };
