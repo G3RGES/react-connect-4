@@ -3,9 +3,10 @@ import GameCircle from "./GameCircle";
 import "../Game.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import { isWinner } from "../helper";
+import { isDraw, isWinner } from "../helper";
 import {
   CIRCLES,
+  GAME_STATE_DRAW,
   GAME_STATE_IDLE,
   GAME_STATE_PLAYING,
   GAME_STATE_WIN,
@@ -45,6 +46,12 @@ const GameBoard = () => {
       // console.log(currentPlayer + "winner"); // TESTING
       setGameState(GAME_STATE_WIN);
       setWinPlayer(currentPlayer);
+    }
+
+    if (isDraw(gameBoard, id, currentPlayer)) {
+      // console.log(currentPlayer + "winner"); // TESTING
+      setGameState(GAME_STATE_DRAW);
+      setWinPlayer(NO_PLAYER);
     }
 
     setGameBoard((prev) => {
