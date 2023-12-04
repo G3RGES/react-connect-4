@@ -14,6 +14,8 @@ const Header = ({ currentPlayer, gameState, winPlayer }) => {
         return <div>Player {currentPlayer} Turn</div>;
       case GAME_STATE_WIN:
         return <div>Player {winPlayer} Won</div>;
+      case GAME_STATE_DRAW:
+        return <div>Draw</div>;
       default:
     }
   };
