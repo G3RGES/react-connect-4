@@ -22,6 +22,11 @@ const GameBoard = () => {
   const [gameState, setGameState] = useState(GAME_STATE_PLAYING);
   const [winPlayer, setWinPlayer] = useState(NO_PLAYER);
 
+  const initGame = () => {
+    setGameBoard(Array(16).fill(NO_PLAYER));
+    setCurrentPlayer(PLAYER_1);
+  };
+
   const initBoard = () => {
     const circles = [];
     for (let i = 0; i < CIRCLES; i++) {
