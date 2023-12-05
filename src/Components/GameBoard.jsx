@@ -16,7 +16,7 @@ import {
 } from "../Constants";
 
 const GameBoard = () => {
-  const [gameBoard, setGameBoard] = useState(Array(16).fill(NO_PLAYER));
+  const [gameBoard, setGameBoard] = useState(Array(CIRCLES).fill(NO_PLAYER));
   // console.log(gameBoard); // TESTING
   const [currentPlayer, setCurrentPlayer] = useState(PLAYER_1);
   const [gameState, setGameState] = useState(GAME_STATE_PLAYING);
@@ -28,7 +28,7 @@ const GameBoard = () => {
 
   const initGame = () => {
     // console.log("init game"); // TESTING
-    setGameBoard(Array(16).fill(NO_PLAYER));
+    setGameBoard(Array(CIRCLES).fill(NO_PLAYER));
     setCurrentPlayer(PLAYER_1);
     setGameState(GAME_STATE_PLAYING);
   };
@@ -100,7 +100,12 @@ const GameBoard = () => {
         winPlayer={winPlayer}
       />
       <div className="gameBoard">{initBoard()}</div>
-      <Footer newGameClick={initGame} suggestClick={suggestClick} />
+      <Footer
+        newGameClick={initGame}
+        suggestClick={suggestClick}
+        // disabled={gameState !== GAME_STATE_PLAYING}
+        gameState={gameState}
+      />
     </>
   );
 };
