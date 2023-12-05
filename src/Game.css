@@ -1,5 +1,21 @@
+:root {
+  --background-color: #d1d3d4;
+  --board-background-color: #034694;
+  --board-border-color: #dba111;
+  --panel-background-color: lightgoldenrodyellow;
+  --panel-border-color: #dba111;
+
+  --footer-button-background-color: #lightblue;
+  --footer-button-background-color-hover: #034694;
+  --footer-button-border: #dba111;
+
+  --player-no-player: white;
+  --player-player1: #ee242c;
+  --player-player2: #6a7ab5;
+}
+
 body {
-  background-color: #d1d3d4;
+  background-color: var(--background-color);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -14,8 +30,8 @@ body {
 
 .panel {
   position: absolute;
-  background-color: lightgoldenrodyellow;
-  border: 8px solid #dba111;
+  background-color: var(--panel-background-color);
+  border: 8px solid var(--panel-border-color);
   border-radius: 8%;
   -webkit-box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
   box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
@@ -61,18 +77,18 @@ body {
   margin-top: 15px;
   width: 130px;
   height: 50px;
-  background-color: lightblue;
+  background-color: var(--footer-button-background-color);
   font-size: 20px;
   font-weight: bold;
   -webkit-box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.9);
   box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.9);
-  border: 5px solid #dba111;
+  border: 5px solid var(--footer-button-border);
   font-weight: bold;
   border-radius: 20px;
 }
 
 .footer button:hover {
-  background-color: #034694;
+  background-color: var(--footer-button-background-color-hover);
   color: white;
 }
 
@@ -86,8 +102,8 @@ body {
   left: 50%;
   margin-left: -250px;
   top: 20%;
-  background-color: #034694;
-  border: 8px solid #dba111;
+  background-color: var(--board-background-color);
+  border: 8px solid var(--board-border-color);
   border-radius: 8%;
   -webkit-box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
   box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
@@ -102,13 +118,13 @@ body {
 }
 
 .player_0 {
-  background-color: white;
+  background-color: var(--player-no-player);
 }
 
 .player_1 {
-  background-color: #ee242c;
+  background-color: var(--player-player1);
 }
 
 .player_2 {
-  background-color: #6a7ab5;
+  background-color: var(--player-player2);
 }
