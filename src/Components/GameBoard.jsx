@@ -3,7 +3,7 @@ import GameCircle from "./GameCircle";
 import "../Game.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import { isDraw, isWinner } from "../helper";
+import { computerMove, isDraw, isWinner } from "../helper";
 import {
   CIRCLES,
   GAME_STATE_DRAW,
@@ -30,6 +30,12 @@ const GameBoard = () => {
     // console.log("init game"); // TESTING
     setGameBoard(Array(16).fill(NO_PLAYER));
     setCurrentPlayer(PLAYER_1);
+    setGameState(GAME_STATE_PLAYING);
+  };
+
+  const suggestClick = () => {
+    // console.log("SUGGEST"); // TESTING
+    circleClicked(computerMove(gameBoard));
   };
 
   const initBoard = () => {
@@ -94,7 +100,7 @@ const GameBoard = () => {
         winPlayer={winPlayer}
       />
       <div className="gameBoard">{initBoard()}</div>
-      <Footer newGameClick={initGame} />
+      <Footer newGameClick={initGame} suggestClick={suggestClick} />
     </>
   );
 };
