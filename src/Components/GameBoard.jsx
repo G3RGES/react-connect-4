@@ -7,7 +7,7 @@ import { computerMove, isDraw, isWinner } from "../helper";
 import {
   CIRCLES,
   GAME_STATE_DRAW,
-  GAME_STATE_IDLE,
+  // GAME_STATE_IDLE,
   GAME_STATE_PLAYING,
   GAME_STATE_WIN,
   NO_PLAYER,
