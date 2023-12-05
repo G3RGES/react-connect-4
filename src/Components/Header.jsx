@@ -1,7 +1,7 @@
 import React from "react";
 
 import {
-  GAME_STATE_IDLE,
+  // GAME_STATE_IDLE,
   GAME_STATE_WIN,
   GAME_STATE_PLAYING,
   GAME_STATE_DRAW,
